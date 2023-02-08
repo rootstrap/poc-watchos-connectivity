@@ -1,0 +1,44 @@
+/* 
+  Localizable.strings
+  POCWatchOSConnectivity
+
+  Created by Fabrizio Piruzi on 16/08/2022.
+  
+*/
+
+// MARK: COMMON
+
+"example_title" = "Welcome %@, %@";
+
+// MARK: WELCOME SCREEN
+
+"welcome_screen_title" = "Welcome to RS iOS Base";
+"welcome_screen_signin_button" = "LOG IN";
+"welcome_screen_facebook_button" = "FACEBOOK CONNECT";
+"welcome_screen_signup_button" = "Don’t have an account? Let’s create one ►";
+
+// MARK: SIGNUP SCREEN
+
+"signup_screen_title" = "Sign Up";
+"signup_email_title" = "Email";
+"signup_password_title" = "Password";
+"signup_confirm_password_title" = "Confirm Password";
+"signup_button" = "SIGN UP";
+"signup_email_textfield_error" = "Please enter a valid email";
+"signup_password_textfield_error" = "Please enter a valid password";
+"signup_password_confirmation_textfield_error" = "Passwords don't match!";
+
+// MARK: SIGN IN SCREEN
+
+"sign_in_screen_title" = "Sign In";
+"sign_in_screen_email_placeholder" = "Email";
+"sign_in_screen_password_placeholder" = "Password";
+"sign_in_screen_button" = "Log in";
+"sign_in_email_textfield_title" = "Email";
+"sign_in_email_textfield_error" = "Please enter a valid email";
+"sign_in_password_textfield_title" = "Password";
+"sign_in_password_textfield_error" = "Please enter a valid password";
+
+// MARK: HOME SCREEN
+
+"home_logout_cta" = "Logout";

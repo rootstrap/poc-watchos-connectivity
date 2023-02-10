@@ -8,26 +8,31 @@
 import SwiftUI
 
 struct CounterView: View {
-  @State var count: Int = 0
+  
+  @ObservedObject var connectivityManager = WatchConnectivityManager.shared
+  
+//  @State var count: String? = connectivityManager.notificationMessage?.text
   
     var body: some View {
       HStack {
-        Button(action: {
-          count += 1
-        }, label: {
-          Text("+")
-            .font(.largeTitle)
-        })
+        Button("+") {
+//          count += 1
+        }
+        .padding()
+        .background(.indigo ,in: Circle())
+        .tint(.white)
+        .font(.largeTitle)
         Spacer()
-        Text(count.description)
+        Text(connectivityManager.notificationMessage?.text ?? "0")
           .font(.largeTitle)
         Spacer()
-        Button(action: {
-          count -= 1
-        }, label: {
-          Text("-")
-            .font(.largeTitle)
-        })
+        Button("-") {
+//          count -= 1
+        }
+        .padding()
+        .background(.indigo ,in: Circle())
+        .tint(.white)
+        .font(.largeTitle)
       }
       .frame(width: 200)
     }

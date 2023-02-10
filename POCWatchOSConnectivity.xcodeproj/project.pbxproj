@@ -34,6 +34,8 @@
 		FD12AD7928C7AF69007E998A /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD12AD7828C7AF69007E998A /* AuthEndpoint.swift */; };
 		FD2CACDF28C9218700AB41D5 /* RSSwiftNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = FD2CACDE28C9218700AB41D5 /* RSSwiftNetworking */; };
 		FD2CACE128C9218700AB41D5 /* RSSwiftNetworkingAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FD2CACE028C9218700AB41D5 /* RSSwiftNetworkingAlamofire */; };
+		FD2F52902996B2AC00D5F2FF /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F528F2996B2AC00D5F2FF /* WatchConnectivityManager.swift */; };
+		FD2F52912996B2AC00D5F2FF /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F528F2996B2AC00D5F2FF /* WatchConnectivityManager.swift */; };
 		FD40D8CC28B3D1820070D930 /* NavigationLinkStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD40D8C828B3D1820070D930 /* NavigationLinkStyles.swift */; };
 		FD40D8CD28B3D1820070D930 /* StackViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD40D8C928B3D1820070D930 /* StackViewStyles.swift */; };
 		FD40D8CE28B3D1820070D930 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD40D8CA28B3D1820070D930 /* TextStyles.swift */; };
@@ -105,6 +107,7 @@
 		E5DCF67028E3852200639572 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		FD12AD7828C7AF69007E998A /* AuthEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
 		FD12AD7A28C7AFE9007E998A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD2F528F2996B2AC00D5F2FF /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
 		FD40D8C828B3D1820070D930 /* NavigationLinkStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationLinkStyles.swift; sourceTree = "<group>"; };
 		FD40D8C928B3D1820070D930 /* StackViewStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewStyles.swift; sourceTree = "<group>"; };
 		FD40D8CA28B3D1820070D930 /* TextStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
@@ -203,6 +206,7 @@
 		880840882889EA4900B09E01 = {
 			isa = PBXGroup;
 			children = (
+				FD2F528E2996B28700D5F2FF /* WatchConnectivity */,
 				880840932889EA4900B09E01 /* POCWatchOSConnectivity */,
 				880840A42889EA4A00B09E01 /* POCWatchOSConnectivityTests */,
 				880840AE2889EA4A00B09E01 /* POCWatchOSConnectivityUITests */,
@@ -362,6 +366,14 @@
 				882282BE28AC149200C567D4 /* Localizable */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		FD2F528E2996B28700D5F2FF /* WatchConnectivity */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F528F2996B2AC00D5F2FF /* WatchConnectivityManager.swift */,
+			);
+			path = WatchConnectivity;
 			sourceTree = "<group>";
 		};
 		FD606F2E28C7B08C00FFB2D7 /* Models */ = {
@@ -659,6 +671,7 @@
 				E55E3D4A29087F2A00A3622D /* LoaderView.swift in Sources */,
 				E50702A5290C0BA50028D5C6 /* LoaderPresenter.swift in Sources */,
 				FD79BD1028C7ADF300DE516F /* SessionManager.swift in Sources */,
+				FD2F52902996B2AC00D5F2FF /* WatchConnectivityManager.swift in Sources */,
 				FD606F3228C7B0EC00FFB2D7 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -685,6 +698,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC381AA2993E5B000D629DE /* CounterView.swift in Sources */,
+				FD2F52912996B2AC00D5F2FF /* WatchConnectivityManager.swift in Sources */,
 				FDC381A82993E5B000D629DE /* WatchOSAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -755,7 +769,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -809,7 +823,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1011,7 +1025,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1142,7 +1156,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1228,6 +1242,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUNDLE_DOMAIN = com.rootstrap;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1236,14 +1251,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchOSApp;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "${BUNDLE_DOMAIN}.${PROJECT_BASE_NAME}-${CONFIGURATION}";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "${BUNDLE_DOMAIN}.${PROJECT_BASE_NAME}-${CONFIGURATION}.watchapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROJECT_BASE_NAME = POCWatchOSConnectivity;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1258,6 +1274,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUNDLE_DOMAIN = com.rootstrap;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1266,14 +1283,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchOSApp;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "${BUNDLE_DOMAIN}.${PROJECT_BASE_NAME}-${CONFIGURATION}";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "${BUNDLE_DOMAIN}.${PROJECT_BASE_NAME}-${CONFIGURATION}.watchapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROJECT_BASE_NAME = POCWatchOSConnectivity;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1288,6 +1306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUNDLE_DOMAIN = com.rootstrap;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1296,14 +1315,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchOSApp;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "${BUNDLE_DOMAIN}.${PROJECT_BASE_NAME}-${CONFIGURATION}";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "${BUNDLE_DOMAIN}.${PROJECT_BASE_NAME}-${CONFIGURATION}.watchapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROJECT_BASE_NAME = POCWatchOSConnectivity;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1318,6 +1338,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUNDLE_DOMAIN = com.rootstrap;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1326,14 +1347,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchOSApp;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "${BUNDLE_DOMAIN}.${PROJECT_BASE_NAME}-${CONFIGURATION}";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "${BUNDLE_DOMAIN}.${PROJECT_BASE_NAME}-${CONFIGURATION}.watchapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROJECT_BASE_NAME = POCWatchOSConnectivity;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -9,26 +9,33 @@ import SwiftUI
 
 struct CounterView: View {
   
-  @State var count: Int = 0
-    var body: some View {
-        HStack {
-          Button(action: {
-            count += 1
-          }, label: {
-            Text("+")
-              .font(.largeTitle)
-          })
-          Text(count.description)
-            .font(.largeTitle)
-          Button(action: {
-            count -= 1
-          }, label: {
-            Text("-")
-              .font(.largeTitle)
-          })
-        }
-        .padding()
+  @ObservedObject var connectivityManager = WatchConnectivityManager.shared
+  
+  @State var count: Int = 0 {
+    didSet {
+      connectivityManager.send(count.description)
     }
+  }
+  
+  var body: some View {
+    HStack {
+      Button(action: {
+        count += 1
+      }, label: {
+        Text("+")
+          .font(.largeTitle)
+      })
+      Text(count.description)
+        .font(.largeTitle)
+      Button(action: {
+        count -= 1
+      }, label: {
+        Text("-")
+          .font(.largeTitle)
+      })
+    }
+    .padding()
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {

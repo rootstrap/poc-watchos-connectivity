@@ -11,31 +11,38 @@ struct CounterView: View {
   
   @ObservedObject var connectivityManager = WatchConnectivityManager.shared
   
-//  @State var count: String? = connectivityManager.notificationMessage?.text
+  @State var count: Int = 0
   
-    var body: some View {
-      HStack {
-        Button("+") {
-//          count += 1
-        }
-        .padding()
-        .background(.indigo ,in: Circle())
-        .tint(.white)
-        .font(.largeTitle)
-        Spacer()
-        Text(connectivityManager.notificationMessage?.text ?? "0")
+  var body: some View {
+    HStack {
+      Button(action: {
+        count -= 1
+        connectivityManager.send(count)
+      }, label: {
+        Text("-")
           .font(.largeTitle)
-        Spacer()
-        Button("-") {
-//          count -= 1
-        }
-        .padding()
-        .background(.indigo ,in: Circle())
-        .tint(.white)
+      })
+      .padding()
+      Text(count.description)
         .font(.largeTitle)
-      }
-      .frame(width: 200)
+        .padding()
+      Button(action: {
+        count += 1
+        connectivityManager.send(count)
+      }, label: {
+        Text("+")
+          .font(.largeTitle)
+      })
     }
+    .padding()
+    .onReceive(
+      connectivityManager.$notificationMessage,
+      perform: { message in
+        guard let message = message else { return }
+        count = message.value
+      }
+    )
+  }
 }
 
 struct CounterView_Previews: PreviewProvider {

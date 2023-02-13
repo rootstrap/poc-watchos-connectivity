@@ -31,11 +31,12 @@
 		E547ED07290730E90048EC05 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E547ED06290730E90048EC05 /* Colors.xcassets */; };
 		E55E3D4A29087F2A00A3622D /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55E3D4929087F2A00A3622D /* LoaderView.swift */; };
 		E5DCF67128E3852200639572 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DCF67028E3852200639572 /* SignUpViewModel.swift */; };
+		FD002826299AC0800034E06A /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F528F2996B2AC00D5F2FF /* WatchConnectivityManager.swift */; };
+		FD00282A299AC26F0034E06A /* WatchOSApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FDC381A52993E5B000D629DE /* WatchOSApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FD12AD7928C7AF69007E998A /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD12AD7828C7AF69007E998A /* AuthEndpoint.swift */; };
 		FD2CACDF28C9218700AB41D5 /* RSSwiftNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = FD2CACDE28C9218700AB41D5 /* RSSwiftNetworking */; };
 		FD2CACE128C9218700AB41D5 /* RSSwiftNetworkingAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FD2CACE028C9218700AB41D5 /* RSSwiftNetworkingAlamofire */; };
 		FD2F52902996B2AC00D5F2FF /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F528F2996B2AC00D5F2FF /* WatchConnectivityManager.swift */; };
-		FD2F52912996B2AC00D5F2FF /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F528F2996B2AC00D5F2FF /* WatchConnectivityManager.swift */; };
 		FD40D8CC28B3D1820070D930 /* NavigationLinkStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD40D8C828B3D1820070D930 /* NavigationLinkStyles.swift */; };
 		FD40D8CD28B3D1820070D930 /* StackViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD40D8C928B3D1820070D930 /* StackViewStyles.swift */; };
 		FD40D8CE28B3D1820070D930 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD40D8CA28B3D1820070D930 /* TextStyles.swift */; };
@@ -75,7 +76,28 @@
 			remoteGlobalIDString = 880840902889EA4900B09E01;
 			remoteInfo = POCWatchOSConnectivity;
 		};
+		FD00282B299AC26F0034E06A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 880840892889EA4900B09E01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDC381A42993E5B000D629DE;
+			remoteInfo = "WatchOSApp Watch App";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FD00282D299AC26F0034E06A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FD00282A299AC26F0034E06A /* WatchOSApp Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7A7278D828BE9AA300700D5D /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -105,6 +127,7 @@
 		E547ED06290730E90048EC05 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E55E3D4929087F2A00A3622D /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		E5DCF67028E3852200639572 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		FD002828299AC2590034E06A /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		FD12AD7828C7AF69007E998A /* AuthEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
 		FD12AD7A28C7AFE9007E998A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD2F528F2996B2AC00D5F2FF /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
@@ -212,6 +235,7 @@
 				880840AE2889EA4A00B09E01 /* POCWatchOSConnectivityUITests */,
 				FDC381A62993E5B000D629DE /* WatchOSApp Watch App */,
 				880840922889EA4900B09E01 /* Products */,
+				FD002827299AC2590034E06A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -310,6 +334,14 @@
 				E50702A4290C0BA50028D5C6 /* LoaderPresenter.swift */,
 			);
 			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		FD002827299AC2590034E06A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD002828299AC2590034E06A /* WatchConnectivity.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FD243869289C33280026BFDF /* Navigation */ = {
@@ -476,10 +508,12 @@
 				8808408D2889EA4900B09E01 /* Sources */,
 				8808408E2889EA4900B09E01 /* Frameworks */,
 				8808408F2889EA4900B09E01 /* Resources */,
+				FD00282D299AC26F0034E06A /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FD00282C299AC26F0034E06A /* PBXTargetDependency */,
 			);
 			name = POCWatchOSConnectivity;
 			packageProductDependencies = (
@@ -698,7 +732,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC381AA2993E5B000D629DE /* CounterView.swift in Sources */,
-				FD2F52912996B2AC00D5F2FF /* WatchConnectivityManager.swift in Sources */,
+				FD002826299AC0800034E06A /* WatchConnectivityManager.swift in Sources */,
 				FDC381A82993E5B000D629DE /* WatchOSAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -715,6 +749,11 @@
 			isa = PBXTargetDependency;
 			target = 880840902889EA4900B09E01 /* POCWatchOSConnectivity */;
 			targetProxy = 880840AC2889EA4A00B09E01 /* PBXContainerItemProxy */;
+		};
+		FD00282C299AC26F0034E06A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDC381A42993E5B000D629DE /* WatchOSApp Watch App */;
+			targetProxy = FD00282B299AC26F0034E06A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

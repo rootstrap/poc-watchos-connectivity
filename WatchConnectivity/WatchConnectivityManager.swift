@@ -10,7 +10,7 @@ import WatchConnectivity
 
 struct NotificationMessage: Identifiable {
     let id = UUID()
-    let text: String
+    let value: Int
 }
 
 class WatchConnectivityManager: NSObject, ObservableObject {
@@ -28,7 +28,7 @@ class WatchConnectivityManager: NSObject, ObservableObject {
     }
   }
   
-  func send(_ message: String) {
+  func send(_ value: Int) {
       guard WCSession.default.activationState == .activated else {
         return
       }
@@ -42,7 +42,7 @@ class WatchConnectivityManager: NSObject, ObservableObject {
       }
       #endif
       
-      WCSession.default.sendMessage([kMessageKey : message], replyHandler: nil) { error in
+      WCSession.default.sendMessage([kMessageKey : value], replyHandler: nil) { error in
           print("Cannot send message: \(String(describing: error))")
       }
   }
@@ -51,9 +51,9 @@ class WatchConnectivityManager: NSObject, ObservableObject {
 extension WatchConnectivityManager: WCSessionDelegate {
   
   func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-      if let notificationText = message[kMessageKey] as? String {
+      if let notificationText = message[kMessageKey] as? Int {
           DispatchQueue.main.async { [weak self] in
-              self?.notificationMessage = NotificationMessage(text: notificationText)
+              self?.notificationMessage = NotificationMessage(value: notificationText)
           }
       }
   }

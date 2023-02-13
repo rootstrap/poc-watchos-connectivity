@@ -11,30 +11,35 @@ struct CounterView: View {
   
   @ObservedObject var connectivityManager = WatchConnectivityManager.shared
   
-  @State var count: Int = 0 {
-    didSet {
-      connectivityManager.send(count.description)
-    }
-  }
+  @State var count: Int = 0
   
   var body: some View {
     HStack {
       Button(action: {
-        count += 1
-      }, label: {
-        Text("+")
-          .font(.largeTitle)
-      })
-      Text(count.description)
-        .font(.largeTitle)
-      Button(action: {
         count -= 1
+        connectivityManager.send(count)
       }, label: {
         Text("-")
           .font(.largeTitle)
       })
+      Text(count.description)
+        .font(.largeTitle)
+        .padding()
+      Button(action: {
+        count += 1
+        connectivityManager.send(count)
+      }, label: {
+        Text("+")
+          .font(.largeTitle)
+      })
     }
-    .padding()
+    .onReceive(
+      connectivityManager.$notificationMessage,
+      perform: { message in
+        guard let message = message else { return }
+        count = message.value
+      }
+    )
   }
 }
 

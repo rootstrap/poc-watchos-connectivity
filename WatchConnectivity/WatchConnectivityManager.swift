@@ -42,9 +42,23 @@ class WatchConnectivityManager: NSObject, ObservableObject {
       }
       #endif
       
+      //Messages can only be sent while the sending app is running
       WCSession.default.sendMessage([kMessageKey : value], replyHandler: nil) { error in
           print("Cannot send message: \(String(describing: error))")
       }
+    /** ----------------------------------- ALTERNATIVES  -----------------------------------
+        - updateApplicationContext(_:) 
+        - sendMessageData(_:replyHandler:errorHandler:)
+     
+        WARNING: The Simulator app doesn’t support the three followings methods.
+         Background transfers continue transferring when the sending app exits. The
+         counterpart app (other side) is not required to be running for background
+         transfers to continue. The system will transfer content at opportune times.
+     
+        - transferUserInfo(_:)
+        - transferCurrentComplicationUserInfo(_:)
+     
+     */
   }
 }
 
